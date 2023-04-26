@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUTRITION FACTS CALCULATOR</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="A Nutrition Facts Calculator that computes for Kcal from Protein, Non-Protein Calorie, Carbohydrate (RENI), Fat (RENI), and % RENI per serving. A website for Regulatory Affairs Officers handling food products in the Philippines."
+    />
+    <meta
+      name="keywords"
+      content="Nutrition Facts Calculator, Kcal from protein, non-protein calorie, carbohydrate(RENI), Fat(RENI), RENI per serving in %, Percent RENI calculator, How to compute for Philippine RENI, How to calculate RENI, Regulatory Affairs Officer, Food Products, Philippines, FDA Philippines, Product Registration, Regulatory Pharmacist, KoderPharmaKoder"
+    />
+    <meta name="author" content="Created by KoderPharmaKoder, a Pharmacist." />
+  </head>
+  <body>
+    <header><h1>NUTRITION FACTS CALCULATOR</h1></header>
+
+    <main class="calculator-container">
+      <div class="nutrient-calculator">
+        <h2>Kcal from Protein</h2>
+        <label class="value" for="protein-value"
+          >Enter protein value in grams</label
+        >
+        <input id="protein-value" type="number" required />
+        <label for="protein-output">Result in kcal</label>
+        <input id="protein-output" type="text" readonly />
+      </div>
+
+      <div class="nutrient-calculator">
+        <h2>Non-Protein Calorie</h2>
+        <label class="value" for="kcal-from-protein-value"
+          >Enter kcal from protein value
+        </label>
+        <input id="kcal-from-protein-value" type="number" required />
+        <label for="npc-output">Result in kcal</label>
+        <input id="npc-output" type="text" readonly />
+      </div>
+
+      <div class="nutrient-calculator">
+        <h2>Carbohydrate (RENI)</h2>
+        <label class="value" for="npc-value-carbohydrate"
+          >Enter non-protein calorie value</label
+        >
+        <input
+          id="npc-value-carbohydrate"
+          class="protein-value"
+          type="number"
+          required
+        />
+        <label for="carbohydrate-reni-output">Result in grams</label>
+        <input id="carbohydrate-reni-output" type="text" readonly />
+      </div>
+
+      <div class="nutrient-calculator">
+        <h2>Fat (RENI)</h2>
+        <label class="value" for="npc-value-fat"
+          >Enter non-protein calorie value</label
+        >
+        <input id="npc-value-fat" type="number" required />
+        <label for="fat-reni-output">Result in grams</label>
+        <input id="fat-reni-output" type="text" readonly />
+      </div>
+
+      <div class="nutrient-calculator">
+        <h2>RENI Per Serving in %</h2>
+        <label class="value" for="amount-per-serving"
+          >Enter amount per serving</label
+        >
+        <input id="amount-per-serving" type="number" required />
+        <label for="reni-value">Enter RENI value</label>
+        <input id="reni-value" type="number" disabled required />
+        <label for="reni-output">Result in %</label>
+        <input id="reni-output" type="text" disabled readonly />
+      </div>
+    </main>
+    <div class="btn">
+      <button class="clear-all-btn" id="clear-all-btn">CLEAR ALL</button>
+    </div>
+    <footer><small>Created by KoderPharmaKoder</small></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
